@@ -1,7 +1,7 @@
 package pack1
 
-import kotlinx.coroutines.*
-import kotlin.coroutines.suspendCoroutine
+import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.delay
 
 suspend fun main() {
 
@@ -14,8 +14,6 @@ suspend fun main() {
         println("mess = $mess")
         println("answerPostgres = $answerPostgres")
         println("answerGoogle = $answerGoogle")
-
-
 
     }
 

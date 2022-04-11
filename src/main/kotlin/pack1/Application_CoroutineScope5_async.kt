@@ -5,9 +5,7 @@ import kotlinx.coroutines.*
 suspend fun main() {
 
     coroutineScope {
-        val message = async(start = CoroutineStart.LAZY) {
-            getMessage1()
-        }
+        val message = async(start = CoroutineStart.LAZY) { getMessage1() }
 
         delay(5000L)
         println("program starting")
