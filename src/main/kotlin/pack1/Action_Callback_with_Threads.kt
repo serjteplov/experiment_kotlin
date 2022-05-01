@@ -3,8 +3,9 @@ package pack1
 import java.util.concurrent.Executors
 
 fun main() {
+    println("Program starts")
     postItem6("Something")
-    println("Program starting")
+    println("Program ends")
 }
 
 fun postItem6(item: String) {
@@ -22,7 +23,6 @@ fun preparePostAsync6(callBack: (String) -> Unit) {
     Executors.newCachedThreadPool().submit<Any?> {
         callBack("token_result")
     }
-
 }
 
 fun submitPostAsync6(

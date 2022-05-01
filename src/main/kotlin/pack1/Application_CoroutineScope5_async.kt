@@ -4,6 +4,7 @@ import kotlinx.coroutines.*
 
 suspend fun main() {
 
+    println("Program starts")
     coroutineScope {
         val message = async(start = CoroutineStart.LAZY) { getMessage1() }
 
@@ -12,6 +13,7 @@ suspend fun main() {
         println("message: ${message.await()}")
         println("program finished")
     }
+    println("Program ends")
 }
 
 suspend fun getMessage1(): String {

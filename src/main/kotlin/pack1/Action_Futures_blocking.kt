@@ -3,8 +3,9 @@ package pack1
 import java.util.concurrent.CompletableFuture
 
 fun main() {
-    postItem5("Something")
     println("Start program")
+    postItem5("Something")
+    println("End program")
 }
 
 fun postItem5(item: String) {

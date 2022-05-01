@@ -4,6 +4,7 @@ import kotlinx.coroutines.*
 
 suspend fun main() {
 
+    println("Program starts")
     coroutineScope {
 
         val mess = async { getMessage() }
@@ -15,6 +16,7 @@ suspend fun main() {
         answerGoogle.await()
 
     }
+    println("Program ends")
 }
 
 suspend fun getMessage(): String {

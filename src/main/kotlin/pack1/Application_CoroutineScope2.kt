@@ -3,9 +3,9 @@ package pack1
 import kotlinx.coroutines.*
 
 suspend fun main() {
+    println("program starting")
 
-    var message: String? = null
-
+    var message: String?
     coroutineScope {
         println("My context is: $coroutineContext")
         message = getMessage6()
@@ -15,7 +15,6 @@ suspend fun main() {
         //launch { queryWeb6() }
     }
 
-    println("program starting")
     println("message: $message")
     println("program finished")
 }

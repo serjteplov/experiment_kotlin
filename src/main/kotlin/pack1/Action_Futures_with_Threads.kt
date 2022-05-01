@@ -4,8 +4,9 @@ import java.util.concurrent.CompletableFuture
 import java.util.concurrent.Executors
 
 fun main() {
+    println("Program starts")
     postItem3("Something")
-    println("Start program")
+    println("Program ends")
 }
 
 fun postItem3(item: String) {

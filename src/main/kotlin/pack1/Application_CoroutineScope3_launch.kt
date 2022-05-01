@@ -5,6 +5,7 @@ import kotlin.coroutines.EmptyCoroutineContext
 
 suspend fun main() {
 
+    println("program starting")
     var message: String? = null
 
     val job = CoroutineScope(context = EmptyCoroutineContext).launch {
@@ -16,7 +17,6 @@ suspend fun main() {
     }
 
     job.join()
-    println("program starting")
     println("message: $message")
     println("program finished")
 }

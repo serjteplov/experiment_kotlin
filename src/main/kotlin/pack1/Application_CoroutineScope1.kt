@@ -4,7 +4,7 @@ import kotlinx.coroutines.coroutineScope
 import kotlinx.coroutines.delay
 
 suspend fun main() {
-
+    println("Program starts")
     coroutineScope {
 
         val mess = getMess3()
@@ -14,9 +14,8 @@ suspend fun main() {
         println("mess = $mess")
         println("answerPostgres = $answerPostgres")
         println("answerGoogle = $answerGoogle")
-
     }
-
+    println("Program ends")
 }
 
 suspend fun getMess3(): String {

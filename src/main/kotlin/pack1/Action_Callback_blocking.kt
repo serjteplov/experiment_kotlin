@@ -1,8 +1,9 @@
 package pack1
 
 fun main() {
+    println("Program starts")
     postItem2("Something")
-    println("Program starting")
+    println("Program ends")
 }
 
 fun postItem2(item: String) {

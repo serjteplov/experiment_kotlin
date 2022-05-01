@@ -3,8 +3,9 @@ package pack1
 import java.util.concurrent.Executors
 
 fun main() {
-    postItem7("Something")
     println("Program started")
+    postItem7("Something")
+    println("Program ended")
 }
 
 fun postItem7(item: String) {
