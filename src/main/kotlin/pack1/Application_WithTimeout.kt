@@ -4,6 +4,7 @@ import kotlinx.coroutines.*
 
 suspend fun main() {
 
+    println("program starting")
     var message: String? = null
 
     withTimeout(3000) {
@@ -17,7 +18,6 @@ suspend fun main() {
 
 //    job.join()
     Thread.sleep(16000)
-    println("program starting")
     println("message: $message")
     println("program finished")
 }

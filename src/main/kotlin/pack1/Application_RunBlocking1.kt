@@ -4,6 +4,7 @@ import kotlinx.coroutines.*
 
 fun main() {
 
+    println("program starting")
     var message: String
 
     runBlocking {
@@ -14,7 +15,6 @@ fun main() {
     }
 
     Thread.sleep(500)
-    println("program starting")
     println("message: $message")
     println("program finished")
 }

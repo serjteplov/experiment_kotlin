@@ -4,6 +4,7 @@ import kotlinx.coroutines.*
 
 suspend fun main() {
 
+    println("program starting")
     var message: String? = null
 
     val job = GlobalScope.launch {
@@ -11,13 +12,12 @@ suspend fun main() {
         message = getMessage5()
         queryDb6()
         queryWeb6()
-        //launch { queryDb6() }
-        //launch { queryWeb6() }
+//        launch { queryDb6() }
+//        launch { queryWeb6() }
     }
 
 //    job.join()
-    Thread.sleep(16000)
-    println("program starting")
+    Thread.sleep(10000)
     println("message: $message")
     println("program finished")
 }
@@ -37,6 +37,6 @@ suspend fun queryDb5() {
 
 suspend fun queryWeb5() {
     println("Entering in queryWeb")
-    delay(10000L)
+    delay(2000L)
     println("Exiting from queryWeb")
 }

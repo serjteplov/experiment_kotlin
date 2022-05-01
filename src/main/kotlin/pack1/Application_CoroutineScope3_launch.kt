@@ -16,7 +16,7 @@ suspend fun main() {
         launch { queryWeb7() }
     }
 
-    job.join()
+    job.join() // Control asynchronous here
     println("message: $message")
     println("program finished")
 }

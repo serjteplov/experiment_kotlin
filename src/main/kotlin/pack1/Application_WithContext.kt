@@ -4,6 +4,7 @@ import kotlinx.coroutines.*
 
 suspend fun main() {
 
+    println("program starting")
     val message: String
 
     withContext(Dispatchers.IO) {
@@ -15,7 +16,6 @@ suspend fun main() {
     }
 
     delay(500L)
-    println("program starting")
     println("message: $message")
     println("program finished")
 }
