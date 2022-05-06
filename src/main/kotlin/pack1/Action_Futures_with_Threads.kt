@@ -5,7 +5,7 @@ import java.util.concurrent.Executors
 
 fun main() {
     println("Program starts")
-    postItem3("Something")
+    postItem3("Something_important_to_say")
     println("Program ends")
 }
 
@@ -23,9 +23,9 @@ fun preparePostAsync3(): CompletableFuture<String> {
     val completableFuture = CompletableFuture<String>()
 
     Executors.newCachedThreadPool().submit<Any?> {
-        println("Makes request")
+        println("Preparing the post . . .")
         Thread.sleep(2000L)
-        completableFuture.complete("token result")
+        completableFuture.complete("token_123")
         null
     }
 
@@ -40,9 +40,9 @@ fun submitPostAsync3(
     val completableFuture = CompletableFuture<String>()
 
     Executors.newCachedThreadPool().submit<Any?> {
-        println("Submits post: token=$token item=$item")
+        println("Submitting the post . . .   ---> token=$token, item=$item")
         Thread.sleep(1000L)
-        completableFuture.complete("post result")
+        completableFuture.complete(item)
         null
     }
 
@@ -50,6 +50,6 @@ fun submitPostAsync3(
 }
 
 fun processPost3(post: String) {
-    println("Postprocessing post: $post")
+    println("Postprocessing the post . . . Text = $post")
     Thread.sleep(1000L)
 }

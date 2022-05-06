@@ -16,4 +16,11 @@ fun main() {
         }
 
     }
+
+    val schan = SalesChannel.valueOf("ANDROID1")
+    println("schan = ${schan}")
+}
+
+enum class SalesChannel {
+    ANDROID, IOS
 }

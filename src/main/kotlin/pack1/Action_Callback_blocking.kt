@@ -2,7 +2,7 @@ package pack1
 
 fun main() {
     println("Program starts")
-    postItem2("Something")
+    postItem2("Something_important_to_say")
     println("Program ends")
 }
 
@@ -15,7 +15,7 @@ fun postItem2(item: String) {
 }
 
 fun preparePostAsync2(callBack: (String) -> Unit) {
-    println("Makes request")
+    println("Preparing the post . . .")
     Thread.sleep(2000L)
     callBack("token_result") // block
 }
@@ -25,12 +25,12 @@ fun submitPostAsync2(
     item: String,
     callBack: (String) -> Unit
 ) {
-    println("Submits post: token=$token item=$item")
+    println("Submitting the post . . .   ---> token=$token, item=$item")
     Thread.sleep(1000L)
     callBack("post_result") // block
 }
 
 fun processPost2(post: String) {
-    println("Postprocessing post: $post")
+    println("Postprocessing the post . . . Text = $post")
     Thread.sleep(1000L)
 }

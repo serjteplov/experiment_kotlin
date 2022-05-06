@@ -5,7 +5,7 @@ import kotlinx.coroutines.*
 suspend fun main() {
 
     println("Program starts")
-    coroutineScope {
+     coroutineScope {
 
         val mess = async { getMessage() }
         val answerPostgres = async { queryPostgres() }
@@ -28,14 +28,14 @@ suspend fun getMessage(): String {
 
 suspend fun queryPostgres(): String {
     println("Entering in queryPostgres")
-    delay(1000L)
+    delay(3000L)
     println("Exiting from queryPostgres")
     return "Postgres done"
 }
 
 suspend fun queryGoogle(): String {
     println("Entering in queryGoogle")
-    delay(5000L)
+    delay(3000L)
     println("Exiting from queryGoogle")
     return "Google done"
 }

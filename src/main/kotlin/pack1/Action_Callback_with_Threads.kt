@@ -4,7 +4,7 @@ import java.util.concurrent.Executors
 
 fun main() {
     println("Program starts")
-    postItem6("Something")
+    postItem6("Something_important_to_say")
     println("Program ends")
 }
 
@@ -17,7 +17,7 @@ fun postItem6(item: String) {
 }
 
 fun preparePostAsync6(callBack: (String) -> Unit) {
-    println("Makes request")
+    println("Preparing the post . . .")
     Thread.sleep(3000L)
 
     Executors.newCachedThreadPool().submit<Any?> {
@@ -30,7 +30,7 @@ fun submitPostAsync6(
     item: String,
     callBack: (String) -> Unit
 ) {
-    println("Submits post: token=$token item=$item")
+    println("Submitting the post . . .   ---> token=$token, item=$item")
     Thread.sleep(1000L)
 
     Executors.newCachedThreadPool().submit<Any?> {
@@ -39,6 +39,6 @@ fun submitPostAsync6(
 }
 
 fun processPost6(post: String) {
-    println("Postprocessing post: $post")
+    println("Postprocessing the post . . . Text = $post")
     Thread.sleep(1000L)
 }

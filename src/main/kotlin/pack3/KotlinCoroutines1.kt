@@ -17,7 +17,9 @@ fun main() {
     }
     //new coroutine, blocking main thread
     runBlocking {
+        println("blocking main thread Thread: ${Thread.currentThread().name}")
         delay(2000)
+        println("blocking main thread Thread: ${Thread.currentThread().name}")
     }
 
     println("End. Thread: ${Thread.currentThread().name}")

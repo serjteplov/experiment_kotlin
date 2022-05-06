@@ -4,7 +4,7 @@ import java.util.concurrent.CompletableFuture
 
 fun main() {
     println("Start program")
-    postItem5("Something")
+    postItem5("Something_important_to_say")
     println("End program")
 }
 
@@ -17,9 +17,9 @@ fun postItem5(item: String) {
 fun preparePostAsync5(): CompletableFuture<String> {
     val completableFuture = CompletableFuture<String>()
 
-    println("Makes request")
+    println("Preparing the post . . .")
     Thread.sleep(1000L)
-    completableFuture.complete("token result")
+    completableFuture.complete("token_123")
 
     return completableFuture
 }
@@ -32,15 +32,15 @@ fun submitPostAsync5(
     val completableFuture = CompletableFuture<String>()
 
 
-    println("Submits post: token=$token item=$item")
+    println("Submitting the post . . .   ---> token=$token, item=$item")
     Thread.sleep(1000L)
-    completableFuture.complete("post result")
+    completableFuture.complete(item)
 
 
     return completableFuture
 }
 
 fun processPost5(post: String) {
-    println("Postprocessing post: $post")
+    println("Postprocessing the post . . . Text = $post")
     Thread.sleep(2000L)
 }

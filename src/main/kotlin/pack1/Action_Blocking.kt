@@ -2,7 +2,7 @@ package pack1
 
 fun main() {
     println("Program starts")
-    postItem("Something")
+    postItem("Something_important_to_say")
     println("Program ends")
 }
 
@@ -13,21 +13,21 @@ fun postItem(item: String) {
 }
 
 fun preparePost(): String {
-    println("Makes request")
+    println("Preparing the post . . .")
     Thread.sleep(2000L)
-    return "token result"
+    return "token_123"
 }
 
 fun submitPost(
     token: String,
     item: String
 ): String {
-    println("Submits post: token=$token item=$item")
+    println("Submitting the post . . .   ---> token=$token, item=$item")
     Thread.sleep(2000L)
-    return "post result"
+    return item
 }
 
 fun processPost(post: String) {
-    println("Postprocessing post: $post")
+    println("Postprocessing the post . . . Text = $post")
     Thread.sleep(2000L)
 }

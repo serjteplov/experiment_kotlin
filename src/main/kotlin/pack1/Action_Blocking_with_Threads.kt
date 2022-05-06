@@ -4,7 +4,7 @@ import java.util.concurrent.Executors
 
 fun main() {
     println("Program started")
-    postItem7("Something")
+    postItem7("Something_important_to_say")
     println("Program ended")
 }
 
@@ -18,21 +18,21 @@ fun postItem7(item: String) {
 }
 
 fun preparePost7(): String {
-    println("Makes request")
+    println("Preparing the post . . .")
     Thread.sleep(2000L)
-    return "token result"
+    return "token_123"
 }
 
 fun submitPost7(
     token: String,
     item: String
 ): String {
-    println("Submits post: token=$token item=$item")
+    println("Submitting the post . . .   ---> token=$token, item=$item")
     Thread.sleep(2000L)
-    return "post result"
+    return item
 }
 
 fun processPost7(post: String) {
-    println("Postprocessing post: $post")
+    println("Postprocessing the post . . . Text = $post")
     Thread.sleep(2000L)
 }

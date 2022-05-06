@@ -1,6 +1,7 @@
 package pack1
 
 import kotlinx.coroutines.*
+import kotlin.coroutines.suspendCoroutine
 
 suspend fun main() {
 
