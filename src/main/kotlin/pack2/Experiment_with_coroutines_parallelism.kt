@@ -53,6 +53,7 @@ fun pureDelay() {
     (1..1000_000).forEach { (1..100000).forEach {  } }
 }
 
+// для примера: неправильное написание suspend функции, текущий поток здесь блокируется
 suspend fun notSuspendDelay() = suspendCoroutine<Unit> { continuation ->
     (1..100).forEach { (1..100).forEach {  } }
     continuation.resume(Unit)
@@ -66,7 +67,7 @@ suspend fun suspendDelay() = coroutineScope {
 
 suspend fun suspendDelayAnother() = suspendCoroutine<Unit> { continuation ->
     thread {
-        (1..100).forEach { (1..100).forEach {  } }
+        (1..1000).forEach { (1..100).forEach {  } }
         continuation.resume(Unit)
     }
 }
