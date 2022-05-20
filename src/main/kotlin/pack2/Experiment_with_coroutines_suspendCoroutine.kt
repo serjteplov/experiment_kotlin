@@ -17,7 +17,7 @@ fun main() = runBlocking {
     val deferred: List<Deferred<Int>> = (1..3).map {
         async {
             log.info("Start coroutine $it")
-            suspendDelay2()
+            suspendDelay3_working()
             delay(3000L * it)
             log.info("Loading $it")
             it
