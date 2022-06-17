@@ -11,12 +11,8 @@ fun main() {
 
 fun postItem3(item: String) {
     preparePostAsync3()
-        .thenCompose { token ->
-            submitPostAsync3(token, item)
-        }
-        .thenAccept { post ->
-            processPost3(post)
-        }
+        .thenCompose { token -> submitPostAsync3(token, item) }
+        .thenAccept { post -> processPost3(post) }
 }
 
 fun preparePostAsync3(): CompletableFuture<String> {

@@ -14,10 +14,10 @@ suspend fun main() {
         43
     }
     some2 {
-        delay(1000)
-        launch {
-            val i = 10
-        }
+//        delay(1000)    <---- Для понимания расскоментируй это
+//        launch {
+//            val i = 10
+//        }
         55
     }
 }
@@ -32,6 +32,6 @@ suspend fun some(block: suspend CoroutineScope.() -> Int): Int {
 fun some2(block: () -> Int): Int {
     val scope = CoroutineScope(Dispatchers.IO)
     block.invoke()
-    delay(1000)
+//    delay(1000) <---- Для понимания расскоментируй это
     return 43
 }

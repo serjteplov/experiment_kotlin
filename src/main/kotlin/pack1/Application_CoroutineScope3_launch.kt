@@ -8,7 +8,7 @@ suspend fun main() {
     println("program starting")
     var message: String? = null
 
-    val job = CoroutineScope(context = EmptyCoroutineContext).launch {
+    val job = CoroutineScope(EmptyCoroutineContext).launch {
         println("My context is: $coroutineContext")
         println("A context with name: ${coroutineContext + CoroutineName("test")}")
         message = getMessage7()

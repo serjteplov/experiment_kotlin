@@ -1,6 +1,7 @@
 package pack1
 
 import kotlinx.coroutines.*
+import kotlin.concurrent.thread
 
 fun main() {
 
@@ -14,9 +15,9 @@ fun main() {
         }
     }
 
-//      На тредах - гораздо дольше
+//      На тредах - оч долго
 //        val jobs = List(100_000) {
-//            Thread {
+//            thread {
 //                Thread.sleep(1000)
 //                print(".")
 //            }
