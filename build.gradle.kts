@@ -16,10 +16,10 @@ repositories {
 dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.4.2")
     implementation("junit:junit:4.12")
-// https://mvnrepository.com/artifact/io.github.microutils/kotlin-logging-jvm
     runtimeOnly("io.github.microutils:kotlin-logging-jvm:2.1.21")
-// https://mvnrepository.com/artifact/ch.qos.logback/logback-classic
     implementation("ch.qos.logback:logback-classic:1.2.11")
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.13.3")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.13.3")
 
     testImplementation(kotlin("test"))
 }
